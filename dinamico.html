@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="es-mx">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Encriptador Dinamico</title>
+    <link rel="stylesheet" href="/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Baskervville+SC&family=Krona+One&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+
+</head>
+<body>
+    <main>
+        <header>
+            <nav class="navegacion">
+                <ul class="navegacion__lista">
+                    <li><a href="index.html" class="enlace__lista"><img src="assets/LogoAlura.png">&nbspINICIO</a></li>
+                    <li><a href="fijo.html" class="enlace__lista">ENCRIPTADOR ESTÁTICO</a></li>
+                    <li><a href="dinamico.html" class="enlace__lista">ENCRIPTADOR DINÁMICO</a></li>
+                </ul>
+            </nav>
+        </header>
+        <h1>Bienvenido al Encriptador de Texto Dinámico</h1>
+        <div class="container">
+            <div class="ingreso">
+                <p class="instrucciones"></p>
+                <section class="cuadro">
+                    <textarea id="textoUsuario" rows="15" required></textarea>
+                    <label class="label"></label>
+                </section>
+                <section>
+                    <p class="aviso"><img src="assets/Vector.png">&nbsp Solo texto en minúsculas y sin acentos</p>
+                </section>
+                <section class="container__botones">
+                    <button onclick ="tomarTextoEncriptar();" class="boton boton1" id="imagen">Encriptar</button>
+                    <button onclick="tomarTextoDesencriptar();" class="boton boton2" id="imagen">Desencriptar</button>
+                </section>
+            </div>
+            <div class="derecha">
+                <div class="contenedor__derecha">
+                    <img class="buscar" src="assets/Muñeco.png" id="img">
+                    <p class="derecha__Resultado"></p>
+                </div>
+                <div class="botonescopiar">
+                    <button onclick = "copiarTexto();" class="boton boton5"id="boton3">Copiar</button>
+                    <button onclick = "limpiarCaja();" class="boton boton4" id="imagen">Limpiar</button>
+                </div>
+            </div>
+        </div>
+    </main>
+    <footer>
+        <p class="pie"></p>
+    </footer>
+
+    <script src="apps/app.js"></script>
+
+</body>
+</html>

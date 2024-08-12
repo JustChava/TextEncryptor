@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="es-mx">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Spanish Encriptor</title>
+    <link rel="stylesheet" href="/style.css">
+    <link href="fonticon/css/all.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Baskervville+SC&family=Krona+One&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+
+</head>
+<body>
+    <main>
+        <header>
+            <nav class="navegacion">
+                
+                <ul class="navegacion__lista">
+                    <li><img src="assets/LogoAlura.png"><a href="index.html" class="enlace__lista">&nbspINICIO</a></li>
+                    <li><a href="fijo.html" class="enlace__lista">ENCRIPTADOR ESTÁTICO</a></li>
+                    <li><a href="dinamico.html" class="enlace__lista">ENCRIPTADOR DINÁMICO</a></li>
+                </ul>
+            </nav>
+        </header>
+        <h1 class="titulo">Bienvenido al <strong class="brillo">Encriptador de Texto</strong></h1>
+            <p class="funcionamiento">
+                En esta página encontraras la posibilidad de <strong class="brillo">encriptar textos</strong> y también de desencriptarlos, 
+                sigue las instucciones en cada tipo de encriptador, y recuerda que el encriptador dinámico 
+                <strong class="brillo">cambia</strong> cada que se actualiza la página, mientras que el encriptador estático sigue igual 
+                al paso del tiempo, por lo que puedes entrar a utilizarlo y desencriptar tu información en 
+                cualquier momento; por último recuerda solo encriptar textos compuestos solamente por <strong class="brillo">letras 
+                minúsculas sin acentos y los espacios.</strong>
+            </p>
+        <div class="tipoEncriptador">
+            <div class="estatico">
+                <p class="estatico__titulo__izq">ENCRIPTADOR</p>
+                <p class="estatico__titulo__der">ESTÁTICO</p>
+                <section class="llamado">
+                    <p class="generales__descripcion">
+                        Este encriptador contiene un código de encriptación <strong class="brillo">prediseñado,</strong> 
+                        si quieres conocer el código de encriptación utilizado, ve los resultados 
+                        de la consola, donde se muestra el vector con los 28 lugares del abecedario 
+                        contando el espacio y la ñ asignados con <strong class="brillo">tres o cuatro caracteres</strong> para cada letra. 
+                    </p>
+                    <p class="generales__descripcion">
+                        Si eres una persona que le gustan los retos, este es <strong class="brillo">un reto lógico</strong> muy bueno,
+                        puedes generar la enciptación de un texto y tratar de <strong class="brillo">decifrar el código por tí mismo,</strong> 
+                        puedes pasar unos minutos, unas horas o algunos dias, dependiendo de tu lógica al procesar los datos. 
+                        <strong class="brillo">Pruébalo</strong> y reta a tu cerebro a algo diferente presionando el botón debajo.
+                    </p>
+                </section>
+                <div class="botones">
+                    <a class="botones__enlaces" href="/fijo.html">
+                        <i class="fa-solid fa-trowel"></i>
+                        &nbsp&nbspEncriptador Estático
+                    </a>
+                </div>
+            </div>
+            <div class="dinamico">
+                <p class="dinamico__titulo__izq">ENCRIPTADOR</p>
+                <p class="dinamico__titulo__der">DINÁMICO</p>
+                <section class="llamado">
+                    <p class="generales__descripcion">
+                        Este encriptador <strong class="brillo">genera un nuevo código</strong> de encriptación cada vez que se 
+                        actualiza la página, si quieres conocer el código de encriptación utilizado 
+                        en cada sesión, ve los resultados de la consola, donde <strong class="brillo">se muestra el vector</strong> 
+                        con los 28 lugares del abecedario (contando como el lugar 27 el espacio y el 28 la ñ) 
+                        asignados con tres valores en <strong class="brillo">código asci</strong> para cada letra. 
+                        Lo que se puede resumir en que cada letra toma el valor de tres letras 
+                        aleatorias cada que se actualiza la página del encriptador.
+                    </p>
+                    <p class="generales__descripcion">
+                        Con este encriptador <strong class="brillo">podrás divertirte</strong> un poco o incluso invitar a alguien a intentar decifrarlo
+                        con alguna frase hecha por ustedes mismo esto les da mayor oportunidad de indagar y adivinar que código 
+                        fue utilizado por ustedes mismos. <strong class="brillo">Te invitamos a probarlo</strong> haciendo click en el botón debajo.
+                    </p>
+                </section>
+                <div class="botones">
+                    <a class="botones__enlaces" href="/dinamico.html">
+                        <i class="fa-solid fa-trowel-bricks"></i>
+                        &nbsp&nbspEncriptador Dinámico
+                    </a>
+                </div>
+            </div>
+        </div>
+    </main>
+    <footer>
+        <p class="pie"></p>
+    </footer>
+
+    <script src="apps/app2.js"></script>
+
+</body>
+</html>
