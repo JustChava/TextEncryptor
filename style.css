@@ -308,7 +308,7 @@ body{
     .botonescopiar{
         justify-content: center;
         align-items: center;
-        padding: 20px 5px 50px 5px;
+        padding: 50px 5px 10px 5px;
     }
 
     .boton{
@@ -699,6 +699,10 @@ body{
 /*FORMATO CELULAR*/
 @media(max-width:419px){
     
+    body{
+        background-color:#7D9595;
+    
+    }
 
     /* BARRA NAVEGACION FORMATO CELULAR*/
 
@@ -719,7 +723,7 @@ body{
         padding-top: 22px;
     }
     .navegacion__lista a{
-        color: var(--color-extra1);
+        color: var(--color-botonactivo);
         text-decoration: none;
         font-size: 0.8rem;
         font-weight: 700;
@@ -910,7 +914,7 @@ body{
         top: 3.5%;
         left: 7%;
         font-size: 12px;
-        background: var(--color-uergente);
+        background:#7D9595;
         color: var(--color-secundario);
         font-family: "Krona One", sans-serif;
         font-weight: 300;

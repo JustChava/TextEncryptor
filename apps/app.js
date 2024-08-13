@@ -22,7 +22,7 @@ function asignarTextoElemento(elemento,texto){
 
 asignarTextoElemento(".instrucciones","Ingresa tu texto y presiona el botón adecuado debajo");
 asignarTextoElemento(".label","Ingresa aquí el texto");
-asignarTextoElemento(".derecha__Resultado","");
+asignarTextoElemento(".derecha__Resultado"," ");
 asignarTextoElemento(".pie","Realizado por Salvador Contreras 2024");
 
 function generaEncriptador (){
@@ -137,7 +137,7 @@ function desencriptadorTexto(){
 
 function limpiarCaja (){
     asignarTextoElemento(".instrucciones","Ingresa tu texto y escoge la opción adecuada debajo");
-    asignarTextoElemento(".derecha__Resultado",".");
+    asignarTextoElemento(".derecha__Resultado"," ");
     let button = document.getElementById('boton3');
     button.textContent="Copiar";
     document.getElementById('img').style.display='block';

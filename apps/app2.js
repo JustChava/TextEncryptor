@@ -28,19 +28,22 @@ function asignarTextoElemento(elemento,texto){
 
 asignarTextoElemento(".instrucciones","Ingresa tu texto y presiona el botón adecuado debajo");
 asignarTextoElemento(".label","Ingresa aquí el texto");
-asignarTextoElemento(".derecha__Resultado",".");
+asignarTextoElemento(".derecha__Resultado"," ");
 asignarTextoElemento(".pie","Realizado por Salvador Contreras 2024");
 
 
-function encriptarTexto (texto1){
+function encriptarTexto (){
     textoEncriptado="";
+    texto1="";
+    textoDesencriptado="";
     texto1=(document.getElementById('textoUsuario').value);
+    console.log(texto1.length);
     for (contador = 0, tamaño=0; contador<texto1.length; contador++){
         identificadorLetra=texto1.charCodeAt(contador);
         letra=String.fromCharCode(identificadorLetra);
         vectorSuma[contador]=letra;
     }
-    for (contador = 0; contador<=texto1.length; contador++){
+    for (contador = 0; contador<texto1.length; contador++){
         for(contador2=0;contador2<=27;contador2++){
             if(vectorSuma[contador]==vectorAlfabeto[contador2][0]){
                 textoEncriptado+=vectorAlfabeto[contador2][1];
@@ -61,6 +64,7 @@ function encriptarTexto (texto1){
 function desencriptarTexto(){
     textoDesencriptado="";
     t=0;
+    texto1="";
     texto1=(document.getElementById('textoUsuario').value);
     for(contador=0;contador<texto1.length;contador+=t){
         t=4;
@@ -103,7 +107,7 @@ function desencriptarTexto(){
 
 function limpiarCaja (){
     asignarTextoElemento(".instrucciones","Ingresa tu texto y escoge la opción adecuada debajo");
-    asignarTextoElemento(".derecha__Resultado",".");
+    asignarTextoElemento(".derecha__Resultado"," ");
     let button = document.getElementById('boton3');
     button.textContent="Copiar";
     document.getElementById('img').style.display='block';
@@ -112,6 +116,7 @@ function limpiarCaja (){
 }
 
 function copiarTexto(){
+    texto1="";
     let button = document.getElementById('boton3');
     if(textoEncriptado!=""){
         
@@ -123,4 +128,6 @@ function copiarTexto(){
         navigator.clipboard.writeText(textoDesencriptado);
         button.textContent="Copiado";
     }
+    textoEncriptado="";
+    textoDesencriptado="";
 }
