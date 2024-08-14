@@ -27,12 +27,12 @@ asignarTextoElemento(".pie","Realizado por Salvador Contreras 2024");
 
 function generaEncriptador (){
 
-    for (contador = 0; contador<=(124-97); contador++)
+    for (contador = 0; contador<=(127-32); contador++)
     {
-        Encriptador[contador] = [Math.floor(Math.random()*(122 - 96)) + 97,Math.floor(Math.random()*(122 - 96)) + 97,Math.floor(Math.random()*(122 - 96)) + 97];
-        vectorSuma[contador] = Encriptador[contador][0]+Encriptador[contador][1]+Encriptador[contador][2]; 
+        Encriptador[contador] = [Math.floor(Math.random()*(126 - 32)) + 32,Math.floor(Math.random()*(126 - 32)) + 32,Math.floor(Math.random()*(126 - 32)) + 32];
+        vectorSuma[contador] = Encriptador[contador][0]+Encriptador[contador][1]+Encriptador[contador][2];
         while(vectorAlfabeto.includes(vectorSuma[contador])){
-            Encriptador[contador] = [Math.floor(Math.random()*(122 - 96)) + 97,Math.floor(Math.random()*(122 - 96)) + 97,Math.floor(Math.random()*(122 - 96)) + 97];
+            Encriptador[contador] = [Math.floor(Math.random()*(126 - 32)) + 32,Math.floor(Math.random()*(126 - 32)) + 32,Math.floor(Math.random()*(126 - 32)) + 32];
             vectorSuma[contador] = Encriptador[contador][0]+Encriptador[contador][1]+Encriptador[contador][2];
         }
         vectorAlfabeto[contador]=vectorSuma[contador];
@@ -76,14 +76,11 @@ function tomarTextoDesencriptar(){
 function encriptarTexto (texto1){
     for (contador = 0, tamaño=0; contador<texto1.length; contador++){
         identificadorLetra=texto1.charCodeAt(contador);
-        identificadorLetra=identificadorLetra-97;
-        if(identificadorLetra==-65){
-            codigoEncriptado[contador]=Encriptador[26];
+        identificadorLetra=identificadorLetra-32;
+        if(identificadorLetra==209){
+            codigoEncriptado[contador]=Encriptador[95];
         }
-        if(identificadorLetra==144){
-            codigoEncriptado[contador]=Encriptador[27];
-        }
-        if(identificadorLetra!=-65 && identificadorLetra!=144){
+        else{
 
             codigoEncriptado[contador]=Encriptador[identificadorLetra];
         }
@@ -115,16 +112,14 @@ function desencriptadorNumerico(textoEncriptado){
 
 function desencriptadorTexto(){
     for(contador=0;contador<vectorEncriptado.length;contador++){
-        for(contador2=0;contador2<28;contador2++){
+        for(contador2=0;contador2<96;contador2++){
             if(vectorAlfabeto[contador2]==vectorEncriptado[contador]){
-                if(contador2==26){
-                    if(contador2==26)
-                        textoDesencriptado+=" ";
-                }
-                else if(contador2==27)
+                if(contador2==95){
                     textoDesencriptado+="ñ";
-                else if (contador2!=26 && contador2!=27)
-                    textoDesencriptado+=String.fromCharCode(contador2+97);
+                }
+                else{
+                    textoDesencriptado+=String.fromCharCode(contador2+32);
+                }
             }
         }
     }

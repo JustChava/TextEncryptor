@@ -37,7 +37,6 @@ function encriptarTexto (){
     texto1="";
     textoDesencriptado="";
     texto1=(document.getElementById('textoUsuario').value);
-    console.log(texto1.length);
     for (contador = 0, tamaño=0; contador<texto1.length; contador++){
         identificadorLetra=texto1.charCodeAt(contador);
         letra=String.fromCharCode(identificadorLetra);
@@ -59,6 +58,7 @@ function encriptarTexto (){
     button.textContent="Copiar";
     textoDesencriptado="";
     letra="";
+    console.log(textoAlfabeto);
 }
 
 function desencriptarTexto(){
@@ -72,7 +72,6 @@ function desencriptarTexto(){
             identificadorLetra=texto1.charCodeAt(contador2);
             letra+=String.fromCharCode(identificadorLetra);
         }
-        console.log(letra);
         for(contador2=0;contador2<=26;contador2+=2){
             if(letra==vectorAlfabeto[contador2][1]){
                 letra=vectorAlfabeto[contador2][0];
@@ -85,7 +84,6 @@ function desencriptarTexto(){
                 identificadorLetra=texto1.charCodeAt(contador2);
                 letra+=String.fromCharCode(identificadorLetra);
             }
-            console.log(letra);
             for(contador2=1;contador2<=27;contador2+=2){
                 if(letra==vectorAlfabeto[contador2][1]){
                     letra=vectorAlfabeto[contador2][0];

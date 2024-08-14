@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Encriptador Dinamico</title>
+    <title>Completo</title>
     <link rel="stylesheet" href="/style.css">
     <link href="https://fonts.googleapis.com/css2?family=Baskervville+SC&family=Krona+One&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
 
@@ -20,7 +20,7 @@
                 </ul>
             </nav>
         </header>
-        <h1>Bienvenido al Encriptador de Texto Dinámico</h1>
+        <h1>Bienvenido al Encriptador de Texto Completo</h1>
         <div class="container">
             <div class="ingreso">
                 <p class="instrucciones"></p>
@@ -29,11 +29,11 @@
                     <label class="label"></label>
                 </section>
                 <section>
-                    <p class="aviso"><img src="assets/Vector.png">&nbsp Solo texto en minúsculas y sin acentos</p>
+                    <p class="aviso"><img src="assets/Vector.png">&nbsp No admite saltos de linea mas info debajo</p>
                 </section>
                 <section class="container__botones">
-                    <button onclick ="tomarTextoEncriptar();" class="boton boton1" id="imagen">Encriptar</button>
-                    <button onclick="tomarTextoDesencriptar();" class="boton boton2" id="imagen">Desencriptar</button>
+                    <button onclick ="tomarTextoEncriptar();" class="boton boton1">Encriptar</button>
+                    <button onclick="tomarTextoDesencriptar();" class="boton boton2">Desencriptar</button>
                 </section>
             </div>
             <div class="derecha">
@@ -41,18 +41,27 @@
                     <img class="buscar" src="assets/Muñeco.png" id="img">
                     <p class="derecha__Resultado"></p>
                 </div>
-                <div class="botonescopiar">
-                    <button onclick = "copiarTexto();" class="boton boton5"id="boton3">Copiar</button>
-                    <button onclick = "limpiarCaja();" class="boton boton4" id="imagen">Limpiar</button>
-                </div>
+                    <section class="botonescopiar">
+                        <button onclick = "copiarTexto();" class="boton boton5"id="boton3">Copiar</button>
+                        <button onclick = "limpiarCaja();" class="boton boton4" id="imagen">Limpiar</button>
+                    </section>
             </div>
         </div>
+    <section class="caracteres">
+        <h2 class="caracteres__subtitulo">Aquí se muestran los caracteres admitidos para este encriptador</h2>
+        <p class="caracteres__informacion">
+            Gracias a esto puedes realizar <strong class="brillo">dobles o triples encriptaciones</strong> si lo deseas; 
+            toma en cuenta que es un encriptador dinámico por lo que si necesitas el código 
+            de encriptación te invito a consultar los datos de la consola con el vector de 
+            <strong class="brillo">código asci generado</strong> antes de salir o actualizar la página.</p>
+        <img id="img1" src="assets/alfabetocompleto.PNG" alt="Caracteres Admitidos">
+        <img id="img2" src="assets/alfacompletocel.PNG" alt="Caracteres Admitidos">
+    </section>
     </main>
     <footer>
         <p class="pie"></p>
     </footer>
 
-    <script src="apps/app.js"></script>
-
+    <script src="apps/app3.js"></script>
 </body>
 </html>

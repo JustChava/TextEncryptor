@@ -279,7 +279,7 @@ body{
         padding: 3rem 3rem 5rem 1rem;
         border-radius: 8px;
         width: 70%;
-        height: 90%;
+        min-height: 90%;
         box-sizing: border-box;
     }
     .contenedor__derecha{
@@ -303,6 +303,7 @@ body{
         font-size: 13px;
         font-weight: 600;
         padding: 10% 13% 30% 13%;
+        min-height:300px;
 
     }
     .botonescopiar{
@@ -365,7 +366,37 @@ body{
     .boton4:hover{
         border: 2px solid var(--color-secundario);
     }
-
+    .caracteres{
+        display: flex;
+        justify-content: space-evenly;
+        flex-direction: column;
+        padding: 25px 30px 35px 30px;
+        text-align: center;
+    }
+    .caracteres__subtitulo{
+        color: var(--color-navegacion);
+        font-family: "Krona One", sans-serif;
+        font-weight: 400;
+        font-style: normal;
+        font-size: 23px;
+        padding: 5px 30px 5px 30px;
+    }
+    .caracteres__informacion{
+        font-family: "Montserrat", sans-serif;
+        font-size: 20px;
+        font-weight: 600;
+        padding: 5px 30px 5px 30px;
+    }
+    #img1{
+        padding:25px 10px;
+        display: block;
+        width:80%;
+    }
+    #img2{
+        display: none;
+        padding:25px 10px;
+        width:80%;
+    }
     footer{
         background-color: var(--color-extra2);
         padding: 10px 25px 10px 15px;
@@ -684,6 +715,16 @@ body{
         font-weight: 600;
         background-color: var(--color-extra2);
     }
+    #img1{
+        padding:25px 10px;
+        display: none;
+        width:80%;
+    }
+    #img2{
+        display: block;
+        padding:25px 10px;
+        width:80%;
+    }
     footer{
         background-color: var(--color-extra2);
         padding: 10px 25px 10px 15px;
@@ -998,6 +1039,37 @@ body{
         font-size: 10px;
         font-weight: 400;
         background-color: var(--color-extra2);
+    }
+    .caracteres{
+        display: flex;
+        justify-content: space-evenly;
+        flex-direction: column;
+        padding: 25px 30px 35px 30px;
+        text-align: center;
+    }
+    .caracteres__subtitulo{
+        color: var(--color-navegacion);
+        font-family: "Krona One", sans-serif;
+        font-weight: 400;
+        font-style: normal;
+        font-size: 15px;
+        padding: 5px 15px 5px 15px;
+    }
+    .caracteres__informacion{
+        font-family: "Montserrat", sans-serif;
+        font-size: 11px;
+        font-weight: 600;
+        padding: 5px 30px 5px 30px;
+    }
+    #img1{
+        padding:25px 10px;
+        display: none;
+        width:80%;
+    }
+    #img2{
+        display: block;
+        padding:25px 10px;
+        width:80%;
     }
     footer{
         background-color: var(--color-extra2);
